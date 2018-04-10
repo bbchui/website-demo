@@ -1,0 +1,93 @@
+header {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+}
+
+section.top-bar {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
+}
+
+ul.icons li {
+  padding: 5px 20px 5px 0;
+}
+
+.search-cart {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.search-cart button {
+  border: none;
+  cursor: pointer;
+  padding: 8px 15px;
+  transition: background-color 0.5s ease;
+}
+
+.search-cart button:hover {
+  background: #ff4a9b;
+}
+.search-cart button:focus {
+  outline: none;
+}
+
+.fa-search {
+  transition: background-color 0.5s ease;
+}
+.fa-search:hover {
+  color: #cfcfcf;
+}
+
+.fa-shopping-cart {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-left: 5px;
+  padding: 7px 0;
+  width: 32px;
+}
+
+.search-bar {
+  width: 150px;
+  padding: 8px 0;
+  margin-right: 5px;
+  border: none;
+  border-bottom: 1px solid #eee;
+  box-shadow: none;
+  transition: border-bottom 0.5s ease;
+  color: #a4a4a4;
+  font-family: 'Montserrat', sans-serif
+}
+
+@media (max-width: 1199px) and (min-width: 769px).search-bar {
+  width: 80px;
+}
+
+.search-bar::placeholder {
+  color: #a4a4a4;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.search-bar:hover {
+  border-bottom: 1px solid black;
+}
