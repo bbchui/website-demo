@@ -1,5 +1,6 @@
 header {
-  width: 1025px;
+  width: 96%;
+  max-width: 1018px;
   position: relative;
   margin: 0 auto;
 }
@@ -7,6 +8,10 @@ header {
 @media screen and (max-width:1024px) {
   header {
     width: 95%;
+  }
+
+  .search-bar {
+    width: 100px;
   }
 }
 
@@ -90,9 +95,9 @@ ul.icons li {
   font-family: 'Montserrat', sans-serif
 }
 
-@media screen and (max-width:1024px) {
+@media only screen and (max-width : 400px) {
   .search-bar {
-    width: 100px;
+    width: 75px;
   }
 }
 
@@ -119,7 +124,7 @@ ul.icons li {
 
 h1 {
   font-family: Lato, Arial, Verdana, Tahoma, sans-serif;
-  font-size: 47px;
+  font-size: 55px;
   letter-spacing: 4px;
   font-weight: bold;
   color: #010101;
@@ -131,12 +136,24 @@ h6 {
   color: #777777;
   text-transform: uppercase;
   letter-spacing: .2em;
-  padding: 5px 0;
+  padding: 3px 0;
+}
+
+@media screen and (max-width:600px) {
+  h1 {
+    font-size: 9.5vw;
+  }
+
+  h6 {
+    font-size: 11px;
+  }
 }
 
 nav {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  position: relative;
+  line-height: 3em;
 }
 
 @media screen and (max-width:1024px) {
@@ -160,11 +177,7 @@ nav {
   text-align: center;
   margin: 0 auto;
   width: 90%;
-}
-
-.navigation li {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .navigation li a {
@@ -173,7 +186,7 @@ nav {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 12px;
-  line-height: 1.8em;
+  /*line-height: 1.8em;*/
   color: black;
   letter-spacing: .20em;
   word-wrap: break-word;
@@ -185,12 +198,34 @@ nav {
   color: #b5adad;
 }
 
-.li-dropdown {
-  align-items: center;
-}
-
 a#arrow::after {
   content: '\25BE';
   font-size: 12px;
-  /*margin-left: -7px;*/
+}
+
+.nav ul ul {
+  visibility: hidden;
+  position: absolute;
+  border: 1px solid black;
+  justify-content: center;
+  width: 200px;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  background: white;
+}
+
+.nav ul ul li {
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.nav ul ul li a{
+  padding: 0;
+}
+
+li.li-dropdown:hover ul {
+  visibility: visible;
 }
