@@ -1,7 +1,13 @@
 header {
-  width: 95%;
+  width: 1025px;
   position: relative;
   margin: 0 auto;
+}
+
+@media screen and (max-width:1024px) {
+  header {
+    width: 95%;
+  }
 }
 
 section.top-bar {
@@ -75,8 +81,10 @@ ul.icons li {
   font-family: 'Montserrat', sans-serif
 }
 
-@media (max-width: 1199px) and (min-width: 769px).search-bar {
-  width: 80px;
+@media screen and (max-width:1024px) {
+  .search-bar {
+    width: 100px;
+  }
 }
 
 .search-bar::placeholder {
@@ -90,4 +98,63 @@ ul.icons li {
 
 .search-bar:hover {
   border-bottom: 1px solid black;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 52px 0;
+}
+
+h1 {
+  font-family: Lato, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 47px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #010101;
+}
+
+h6 {
+  font-family: Lato, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 11px;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  padding: 5px 0;
+}
+
+nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.navigation li {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.navigation li a {
+  font-family: Lato, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-stretch: normal;
+  font-size: 0.75em;
+  line-height: 1.8em;
+  color: #8b8b8b;
+  letter-spacing: .20em;
+  word-wrap: break-word;
 }
