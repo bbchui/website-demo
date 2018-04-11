@@ -31,6 +31,15 @@ ul.icons li {
   padding: 5px 20px 5px 0;
 }
 
+.icons li a {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.icons li a:hover {
+  color: #ff4a9b;
+}
+
 .search-cart {
   display: flex;
   flex-direction: row;
@@ -130,20 +139,32 @@ nav {
   border-bottom: 1px solid black;
 }
 
+@media screen and (max-width:1024px) {
+  .responsive-nav {
+    height: 40px;
+    width: 100%;
+    background: #cecece;
+    cursor: pointer;
+  }
+
+  .navigation {
+    overflow: hidden;
+    height: 0;
+  }
+}
+
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   margin: 0 auto;
   width: 90%;
 }
 
 .navigation li {
-  padding: 15px;
   display: flex;
   flex-direction: row;
-
 }
 
 .navigation li a {
@@ -151,10 +172,25 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 300;
-  font-stretch: normal;
-  font-size: 0.75em;
+  font-size: 12px;
   line-height: 1.8em;
-  color: #8b8b8b;
+  color: black;
   letter-spacing: .20em;
   word-wrap: break-word;
+  transition: color 0.3s ease;
+  padding: 15px;
+}
+
+.navigation li a:hover {
+  color: #b5adad;
+}
+
+.li-dropdown {
+  align-items: center;
+}
+
+a#arrow::after {
+  content: '\25BE';
+  font-size: 12px;
+  /*margin-left: -7px;*/
 }
