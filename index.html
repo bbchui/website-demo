@@ -66,44 +66,76 @@
         </ul>
       </nav>
 
+      <section class="header-image">
+
+        <figure>
+          <input type="radio" name="images" id="i1" checked>
+          <input type="radio" name="images" id="i2">
+          <input type="radio" name="images" id="i3">
+
+          <div class="slide_img" id="one">
+            <img src="images/img5.jpg" alt="image loading">
+            <label for="i3" class="pre">
+              <i class="fas fa-angle-left"></i>
+            </label>
+            <label for="i2" class="next">
+              <i class="fas fa-angle-right"></i>
+            </label>
+            <article class="header-article">
+              <p>New in the shop</p>
+              <a href="#shop_now">Shop now</a>
+            </article>
+          </div>
+
+          <div class="slide_img" id="two">
+            <img src="images/img7.jpg" alt="image loading">
+            <label for="i1" class="pre">
+              <i class="fas fa-angle-left"></i>
+            </label>
+            <label for="i3" class="next">
+              <i class="fas fa-angle-right"></i>
+            </label>
+            <article class="header-article">
+              <p>Paper goods collection</p>
+              <a href="#shop_now">Shop now</a>
+            </article>
+          </div>
+
+          <div class="slide_img" id="three">
+            <img src="images/img3.jpg" alt="image loading">
+            <label for="i2" class="pre">
+              <i class="fas fa-angle-left"></i>
+            </label>
+            <label for="i1" class="next">
+              <i class="fas fa-angle-right"></i>
+            </label>
+            <article class="header-article">
+              <p>The desktop collection</p>
+              <a href="#shop_now">Shop now</a>
+            </article>
+          </div>
+
+          <!-- <div class="carousel-nav"> dot transition
+            <label class="dots" id="dot1" for="i1"></label>
+            <label class="dots" id="dot2" for="i2"></label>
+            <label class="dots" id="dot3" for="i3"></label>
+          </div> -->
+
+
+        </figure>
+      </section>
+
     </header>
-
-
-
-    <section id="home">
-
-    </section>
-
-    <section id="layout">
-
-    </section>
-
-    <section id="about">
-
-    </section>
-
-    <section id="faq">
-
-    </section>
-
-    <section id="praise">
-
-    </section>
-
-    <section id="blog">
-
-    </section>
-
-    <section id="contact">
-
-    </section>
-
-    <section id="buy_theme">
-
-    </section>
 
     <footer>
 
     </footer>
   </body>
 </html>
+
+
+<!-- You dont need to build the whole thing. The top section up to the row of 4 boxes is what I'm mostly concerned with but more is better of course.  I've attached some images you can use as background images for those boxes. You don't need to create a carousel for that header image, just an image with the button overlayed like it is in that layout with the title. Use any text you want, "lorem ipsum" etc.
+
+For this test I want to see how you handle responsive.  Well keep it simple with 1 breakpoint. Less than 1025px please make the row of 4 boxes sit in a 2 x 2 grid format instead. Also make the button overlay for the top image sit centered underneath the image instead.
+
+Greater than 1025px follow this exact layout. -->

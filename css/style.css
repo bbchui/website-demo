@@ -3,6 +3,7 @@ header {
   max-width: 1018px;
   position: relative;
   margin: 0 auto;
+  min-width: 400px;
 }
 
 @media screen and (max-width:1024px) {
@@ -19,7 +20,7 @@ section.top-bar {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding: 5px 0;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -211,7 +212,7 @@ a#arrow::after {
   width: 200px;
   align-items: center;
   flex-direction: column;
-  z-index: 1;
+  z-index: 1000;
   background: white;
 }
 
@@ -228,4 +229,147 @@ a#arrow::after {
 
 li.li-dropdown:hover ul {
   visibility: visible;
+}
+
+.header-image {
+  padding-top: 45px;
+
+}
+
+figure {
+  position: relative;
+  overflow: hidden;
+  height: 55vw;
+  max-height: 800px;
+}
+
+.slide_img {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+}
+
+.slide_img img {
+  width: 100%;
+  height: 100%;
+}
+
+#i1, #i2, #i3 {
+  display: none;
+}
+
+.pre {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  transition: color 0.5s ease;
+  top: 45%;
+  left: 2%;
+}
+
+.fa-angle-left {
+  font-size: 2em;
+}
+.fa-angle-right {
+  font-size: 2em;
+}
+
+.next {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  transition: color 0.5s ease;
+  top: 45%;
+  right: 3%;
+}
+
+@media screen and (max-width:1024px) {
+  .pre {
+    left: 48%;
+    top: 100%;
+  }
+
+  .next {
+    right: 48%;
+    top: 100%;
+  }
+
+}
+
+.next:hover {
+  color: #383838;
+}
+.pre:hover {
+  color: #383838;
+}
+
+.slide_img {
+  z-index: -1;
+}
+
+#i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three {
+  z-index: 99;
+}
+
+.slide_img article {
+  position: absolute;
+  z-index: 100;
+  width: 40%;
+  margin: auto;
+  top: 25%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  opacity: 0.8;
+  padding: 4%;
+}
+
+article p {
+  font-family: Lato, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-wrap: break-word;
+  max-width: 80%;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+article a {
+  font-family: Lato, sans-serif;
+  font-size: 0.75em;
+  text-decoration: none;
+  background: #000000;
+  border: 1px solid #000000;
+  line-height: 1em;
+  padding: 12px 25px;
+  opacity: 0.9;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-wrap: break-word;
+  letter-spacing: .04em;
+}
+
+@media screen and (max-width: 600px) {
+  article p {
+    font-size: 1em;
+  }
+
+  .slide_img article {
+    width: 100%;
+  height: 40%;
+  padding: 0;
+  left: 0;
+  top: 60%;
+  }
 }
