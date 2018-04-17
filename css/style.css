@@ -1,5 +1,6 @@
 body {
   margin: 0 7px;
+  min-width: 400px;
 }
 
 header {
@@ -498,6 +499,7 @@ mark {
     flex-direction: column;
     align-items: center;
     padding: 3vh 0;
+    text-align: center;
   }
 
   footer section {
