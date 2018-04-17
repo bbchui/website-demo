@@ -2,7 +2,7 @@ body {
   margin: 0 7px;
 }
 
-header, section.four-image {
+header {
   width: 96%;
   max-width: 1018px;
   position: relative;
@@ -82,11 +82,16 @@ ul.icons li {
 .fa-shopping-cart {
   background: black;
   color: white;
-  border: 1px solid black;
   border-radius: 25px;
   margin-left: 5px;
   padding: 7px 0;
   width: 32px;
+  transition: background 0.5s ease;
+}
+
+.fa-shopping-cart:hover {
+  background: #ff4a9b;
+
 }
 
 .search-bar {
@@ -394,24 +399,108 @@ article a:hover {
 }
 
 .four-image {
-  width: 95%;
-  height: 30vh;
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: center;
+  width: 96%;
+  max-width: 1018px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  grid-auto-rows: 40vh;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+  .four-image {
+    width: 95%;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    grid-auto-rows: 50vh;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .four-image {
+    grid-gap: 1.5em;
+    grid-auto-rows: 40vh;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
 }
 
 .extra {
+  position: relative;
+}
+
+.extra img {
   width: 100%;
   height: 100%;
 }
 
-.extra img{
-  width: 95%;
-  height: 100%;
+.extra article {
+  position: absolute;
+  background: rgba(255,255,255,0.7);
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  padding: 15px 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.extra article p {
+  width: 122px;
+  font-family: Lato, sans-serif;
+  font-size: 0.75em;
+  margin: 0;
+  letter-spacing: .08em
 }
 
 footer {
-  height: 50vh;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 96%;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 5vh 0;
+  font-family: Lato, sans-serif;
+  font-size: 0.75em;
+  letter-spacing: .08em;
+  font-weight: 100;
+
+}
+
+footer section a {
+  text-decoration: none;
+  color: #fe96c6;
+  transition: color 0.3s ease;
+
+}
+footer section a:hover {
+  color: #b4b4b4;
+}
+
+footer section p {
+  color: #b4b4b4;
+}
+
+mark {
+  text-decoration: none;
+  background-color: white;
+  color: #fe96c6;
+}
+
+@media screen and (max-width:600px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+  }
+
+  footer section {
+    padding-bottom: 5px;
+  }
 }
